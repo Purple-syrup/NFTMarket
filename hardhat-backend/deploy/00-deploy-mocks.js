@@ -8,14 +8,12 @@ module.exports = async ({ getNamedAcoounts, deployments }) => {
     const chainId = network.config.chainId
 
     log("--------------------")
-  const mockNft=await deploy("MockNft",{
-    from:deployer,
-    log:true,
-    waitConfirmations:network.config.blockConfirmations || 1
-  })
+    const mockNft = await deploy("MockNft", {
+        from: deployer,
+        log: true,
+        waitConfirmations: network.config.blockConfirmations || 1,
+    })
 
-  log("-------------------")
-
-  
+    log("-------------------")
 }
-module.exports.tags=["all","mocknft","mocks"]
+module.exports.tags = ["all", "mocknft", "mocks"]
